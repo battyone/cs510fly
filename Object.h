@@ -15,6 +15,9 @@ public:
 
     virtual void update(float dt) { }
 
+    // Exception thrown by update()
+    class StopUpdates { };
+    
     Ogre::SceneNode * getSceneNode() { return sceneNode; }
     const Ogre::SceneNode * getSceneNode() const { return sceneNode; }
 };

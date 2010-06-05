@@ -243,8 +243,10 @@ void Airplane::crash() {
 }
 
 void Airplane::land() {
-    if (game->getWorld()->getTarget()->inRange(this))
+    if (game->getWorld()->getTarget()->inRange(this)) {
         game->win();
+        throw StopUpdates();
+    }
 }
 
 void Airplane::stopEngine() {

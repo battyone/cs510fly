@@ -172,7 +172,11 @@ void Game::startLevel(int index) {
 }
 
 void Game::update(float dt) {
-    world->update(dt);
+    try {
+        world->update(dt);
+    } catch (const Object::StopUpdates& e) {
+        // Ignore
+    }
     display->update(dt);
     const Ogre::Vector3 &cameraPos = cameraNode->getParentSceneNode()->getPosition();
     alListener3f(AL_POSITION, cameraPos.x, cameraPos.y, cameraPos.z);
