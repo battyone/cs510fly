@@ -21,7 +21,7 @@ static const float THRUST_MAX = 77620.0f * 2; // Two engines at 77.62 kN each
  * how hard a landing would destroy the airframe, not just injure people. Also, AFAICT landing without flaring out -
  * that is, just driving the plane into the runway at a normal 3-degree descent - is stupid and dangerous but *not*
  * necessarily a crash landing in the sense that the plane falls apart. So I'm padding both numbers. */
-static const float LANDING_ROD_MAX = 5.0f; // More than 5 m/s is a crash
+static const float LANDING_ROD_MAX = 10.0f; // More than 10 m/s is a crash
 static const Ogre::Degree LANDING_PITCH_MIN(-5.0f); // More than 5-degree downward pitch attitude is a crash
 
 static const Ogre::Radian ROLL_DELTA(Ogre::Math::HALF_PI/4.0f); // Adjust roll by pi/8 rad/s
